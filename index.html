@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Web</title>
     <link rel="shortcut icon" href="img/sign2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index1,2.css">
 </head>
 <body>
 
@@ -36,23 +36,7 @@
           <button  type="button" onclick="signUp()">Sign Up</button>
         </form>
       </div>
-      <script>
-        let signUpUser=document.getElementById('signUpUser')
-        let signUpEmail=document.getElementById('signUpEmail')
-        let signUpPassword=document.getElementById('signUpPassword')
-        function signUp() {
-          if(!signUpUser.value || !signUpEmail.value || !signUpPassword.value){
-            alert('please enter all input field!')
-  
-            
-          }
-            localStorage.setItem('Name',signUpUser.value)
-            localStorage.setItem('Email',signUpEmail.value)
-            localStorage.setItem('Password',signUpPassword.value)
-            window.location.href='index1.html' 
-          }
-          
-          
-      </script>
+      <script src="index.js"></script>
+
 </body>
 </html>

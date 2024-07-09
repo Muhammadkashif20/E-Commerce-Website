@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Commerce Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index1,2.css">
   <link rel="shortcut icon" href="img/logn.png" type="image/x-icon">
 </head>
 <body>
@@ -31,24 +31,7 @@
      <button type="button" onclick="login()" id="btn">Log In</button>
     </form>
     </div>
-
-
-    <script>
-  let loginEmail=document.getElementById('loginEmail')
-  let loginPassword=document.getElementById('loginPassword')
-  function login() {
-    let storeEmail=localStorage.getItem('Email')
-    let storePassword=localStorage.getItem('Password')
-    if(loginEmail.value==storeEmail && loginPassword.value==storePassword){
-            window.location.href='index2.html'
-          }
-          else{
-            alert('Your Email Address Or Password is incorrect')
-          }
-        }
-  
-          
-    
-  </script>
+<script src="index1.js"></script>
+ 
 </body>
 </html>
