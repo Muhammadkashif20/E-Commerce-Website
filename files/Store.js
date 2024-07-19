@@ -229,11 +229,36 @@ for (var i = 0; i < data.length; i++) {
   }
 }
 var drop=document.getElementById('drop')
-var categories=[];
+var categories=[]
 for(var i=0;i<data.length;i++){
   var category=data[i].category
   if(!categories.includes(category)){
     categories.push(category)
     drop.innerHTML+=`<option value="${category}">${category}</option>`
   }
+}
+drop.innerHTML+=`<option value="all">all</option>`
+  function filterCategory() {
+    var selectCategory=document.getElementById('drop').value
+    store.innerHTML=''
+    for(var i=0;i<data.length;i++){
+      if(selectCategory=='all' || data[i].category==selectCategory){
+        var save=data[i]
+        store.innerHTML+=`
+        <div class="card d-flex justify-content-center align-items-center" style="width: 21rem; margin-top:3rem; margin-left:4rem; padding-top:2rem;">
+        <img src="${save.image}" class="card-img-top" style="width:17rem; height:45vh;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${save.title}</h5>
+          <h6 class="card-title">${save.price}</h6>
+          <p class="card-text">${save.description}</p>
+          <a href="#" class="btn btn-primary" onclick="btn()">Add To Cart</a>
+          <span style="font-size:20px; margin-left:6rem;">
+            <i class="fa-solid fa-star fa-xl" style="color: #FFD43B; margin-right:1rem;"></i>${save.rating.rate}
+          </span>
+        </div>
+      </div>`
+      }
+    }
   }
+      
+
